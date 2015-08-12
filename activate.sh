@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 CUEBENV_AUTH_FILE=~/.cuebenv_auth
-# CUEB_TRIGGER_URL="https://cueb.io/api/v1/contexts/local"
+CUEB_TRIGGER_URL="https://cueb.io/api/v1/contexts/local"
 CUEBENV_TRIGGER_TIMEOUT=3600
-CUEB_TRIGGER_URL="https://127.0.0.1:3443/contexts/local"
 
 if [ -z "$CUEBENV_ENV_FILENAME" ]; then
     CUEBENV_ENV_FILENAME=.cueb
