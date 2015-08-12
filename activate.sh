@@ -139,11 +139,11 @@ cuebenv_source() {
 
 cuebenv_trigger() {
     source ~/.cuebenv/cred.ini
-    curl -XPOST -v -H "x-access-token: ${cueb_api_key}" -H "Content-Type: application/json" \
+    (curl -XPOST -s -H "x-access-token: ${cueb_api_key}" -H "Content-Type: application/json" \
         $CUEB_TRIGGER_URL -d '{
             "uri": "'$PWD'",
             "keywords": "'$1'"
-        }' &>/dev/null
+        }' &>/dev/null &)
 }
 
 cuebenv_cd() {
